@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC TAC</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="mian.js" defer></script>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="icon" href="tic-tac-toe.png">
+  </head>
+  <body>
+    <header>
+      <div>
+        <button class="pushable" onclick="showDialog()">
+          <span class="front"> start </span>
+        </button>
+      </div>
+      <div>
+        <button class="pushable" onclick="window.location.reload()">
+          <span class="front"> reload </span>
+        </button>
+      </div>
+    </header>
+    <section class="Continer">
+      <section class="head">
+        <h1 id="title" class="title">tic tac</h1>
+      </section>
+      <section class="item">
+        <div id="item1" class="items" onclick="game(this.id)"></div>
+        <div id="item2" class="items" onclick="game(this.id)"></div>
+        <div id="item3" class="items" onclick="game(this.id)"></div>
+        <div id="item4" class="items" onclick="game(this.id)"></div>
+        <div id="item5" class="items" onclick="game(this.id)"></div>
+        <div id="item6" class="items" onclick="game(this.id)"></div>
+        <div id="item7" class="items" onclick="game(this.id)"></div>
+        <div id="item8" class="items" onclick="game(this.id)"></div>
+        <div id="item9" class="items" onclick="game(this.id)"></div>
+      </section>
+    </section>
+    <section class="styleSection postionSectionLeft BORDERleft displayNONE" id="sectionO">
+        <h1 id="TitlePlayerO">O</h1>
+        <div id="countO"></div>
+    </section>
+    <section class="styleSection postionSectionRight BORDERright displayNONE" id="sectionX">
+        <h1 id="TitlePlayerX">X</h1>
+        <div id="countX"></div>
+    </section>
+    <section id="startDialog" class="displayNONE">
+      <div class="form">
+        <div class="CountStart">
+          <div>
+            <label for="xPlayer">Xplayer</label><input type="text"name="xPlayer" placeholder="Your Name" id="Xplayer">
+          </div>
+          <div>
+            <label for="oPlayer">Oplayer</label><input type="text"name="oPlayer" placeholder="Your Name" id="Oplayer">
+          </div>
+          <div>
+            <label for="CounterGame">CounterGame</label><input type="number"name="CounterGame" placeholder="Counter Game" id="CounterGame">
+          </div>
+        </div>
+        <div>
+          <button class="pushable" onclick="start()">
+            <span class="front"> start </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="WINsection" class="displayNONE"><h1 id="winName"></h1>
+  </body>
+</html>
