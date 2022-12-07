@@ -47,7 +47,7 @@ function END(NUM1, NUM2, NUM3) {
     }
   window.setTimeout(() => {
     clear(idInterval,item[NUM1].innerHTML);
-  }, 4000);
+  }, 2500);
 }
 // ..........................................
 // this Function to Cheack if Win case really happened when case don't happen cheack if draw case

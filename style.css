@@ -57,12 +57,12 @@ html {
   position: absolute;
   top: 0%;
   z-index: 500;
-  background-color: #edf2f6b6;
+  background-color: #ffffff88;
   border: 0 solid black;
   border-radius: 25px;
 }
 #startDialog .form {
-  background-color: #edf2f6;
+  background-color: #ffffff;
   width: 50%;
   height: 50vh;
   position: relative;
@@ -76,6 +76,7 @@ html {
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: .1rem .1rem 25px 5px black;
 }
 #startDialog .form div {
   margin: 10px;
@@ -99,6 +100,10 @@ html {
 }
 #startDialog .form div input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+#startDialog .form div label {
+  font-size: 1.5rem;
+  padding-left: 15px;
 }
 .Continer {
   width: 60%;
@@ -176,7 +181,7 @@ html {
   padding: 30px 5rem;
 }
 .items {
-  width: 100%;
+  width: 98%;
   aspect-ratio: 1/1;
   border: 1px solid #fff;
   margin: 10% 2%;
@@ -266,7 +271,7 @@ header div {
   transform: translateY(-2px);
 }
 .styleSection {
-  width: 6%;
+  width: 8%;
   height: 20vh;
   background-color: #edf2f6;
   display: flex;
@@ -286,12 +291,13 @@ header div {
   font-weight: 900;
 }
 .BORDERleft {
-  border-bottom-right-radius: 25%;
-  border-top-right-radius: 25%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .BORDERright {
-  border-bottom-left-radius: 25%;
-  border-top-left-radius: 25%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+
 }
 .postionSectionLeft {
   position: absolute;
@@ -323,8 +329,32 @@ header div {
     height: 20px;
     width: 100%;
   }
-  .styleSection h1{
-    font-size: 0.5rem;
+  .styleSection {
+    width: 15%;
+    height: 10vh;
+  }
+  .styleSection h1 {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  .BORDERleft {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius:0%;
+  }
+  .BORDERright {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 0%;
+  
+  }
+  .postionSectionLeft {
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+  .postionSectionRight {
+    position: absolute;
+    top: 0%;
+    right: 0;
   }
 }
 /* Medium */
@@ -348,8 +378,32 @@ header div {
     height: 20px;
     width: 100%;
   }
-  .styleSection h1{
-    font-size: 0.7rem;
+  .styleSection {
+    width: 15%;
+    height: 10vh;
+  }
+  .styleSection h1 {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  .BORDERleft {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius:0%;
+  }
+  .BORDERright {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 0%;
+  
+  }
+  .postionSectionLeft {
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+  .postionSectionRight {
+    position: absolute;
+    top: 0%;
+    right: 0;
   }
 }
 /* Large */
@@ -372,8 +426,32 @@ header div {
     height: 20px;
     width: 100%;
   }
-  .styleSection h1{
+  .styleSection {
+    width: 10%;
+    height: 20vh;
+  }
+  .styleSection h1 {
     font-size: 1rem;
+    font-weight: 900;
+  }
+  .BORDERleft {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius:50%;
+  }
+  .BORDERright {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+  
+  }
+  .postionSectionLeft {
+    position: absolute;
+    top:50%;
+    left: 0;
+  }
+  .postionSectionRight {
+    position: absolute;
+    top: 50%;
+    right: 0;
   }
 }
 /* END CONTINER */
