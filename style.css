@@ -67,8 +67,8 @@ html {
   height: 50vh;
   position: relative;
   top: 25%;
-  left: 25%;
-  border-radius: 20%;
+margin: 0 auto;
+  border-radius: 10% 35%;
   padding: 10%;
   display: flex;
   flex-direction: column;
@@ -309,6 +309,10 @@ header div {
   right: 0;
 }
 @media (min-width: 768px) {
+  #startDialog .form {
+    background-color: #ffffff;
+    width: 50%;
+    height: 50vh;}
   .Continer {
     width: 750px;
     font-size: 22px;
@@ -354,9 +358,14 @@ header div {
     top: 0%;
     right: 0;
   }
+  
 }
 /* Medium */
 @media (min-width: 992px) {
+  #startDialog .form {
+    background-color: #ffffff;
+    width: 50%;
+    height: 50vh;}
   .Continer {
     width: 970px;
     font-size: 28px;
@@ -405,6 +414,10 @@ header div {
 }
 /* Large */
 @media (min-width: 1200px) {
+  #startDialog .form {
+    background-color: #ffffff;
+    width: 30%;
+    height: 50vh;}
   .Continer {
     width: 1170px;
   }
