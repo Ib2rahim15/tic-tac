@@ -12,15 +12,25 @@ let counterGame = 0;
 function game(id) {
   let itemClick = document.getElementById(id);
   if (turn === "X" && itemClick.innerHTML == "") {
+    if(Oplayer.value !=''){
+      title.innerText = "Now it's "+Oplayer.value+"'s turn";
+    }
+    else{
+    title.innerText = "Now it's O's turn";
+    }
     itemClick.innerHTML = "X";
     turn = "O";
-    title.innerText = "Now it's O's turn";
     itemClick.classList.add("active");
     win();
   } else if (turn === "O" && itemClick.innerHTML == "") {
+    if(Xplayer.value !=''){
+      title.innerText = "Now it's "+Xplayer.value+"'s turn";
+    }
+    else{
+    title.innerText = "Now it's X's turn";
+    }
     itemClick.innerHTML = "O";
     turn = "X";
-    title.innerText = "Now it's X's turn";
     itemClick.classList.add("active");
     win();
   }
@@ -29,7 +39,21 @@ function game(id) {
 // this Function to change Style if player win and rest var Turn to X || O
 function END(NUM1, NUM2, NUM3) {
   head.classList.add("headWin");
-  title.innerHTML = item[NUM1].innerHTML + " your Win ";
+  if(item[NUM1].innerHTML=='X'){
+    if(Xplayer.value !=''){
+      title.innerText = Xplayer.value+" your Win ";
+    }
+    else{
+    title.innerText = item[NUM1].innerHTML + " your Win ";
+    }
+  }else   if(item[NUM1].innerHTML=='O'){
+    if(Oplayer.value !=''){
+      title.innerText = Oplayer.value+" your Win ";
+    }
+    else{
+    title.innerText = item[NUM1].innerHTML + " your Win ";
+    }
+  }
   item[NUM1].classList.add("winitem");
   item[NUM2].classList.add("winitem");
   item[NUM3].classList.add("winitem");
@@ -170,17 +194,37 @@ function clear(id, xORo) {
     item[index].classList.remove("active");
   }
   if (xORo == "O") {
+    if(Oplayer.value !=''){
+      title.innerText = "Now it's "+Oplayer.value+"'s turn";
+    }
+    else{
     title.innerText = "Now it's O's turn";
+    }
   } else if (xORo == "X") {
+    if(Xplayer.value !=''){
+      title.innerText = "Now it's "+Xplayer.value+"'s turn";
+    }
+    else{
     title.innerText = "Now it's X's turn";
+    }
   } else {
     if (parseInt(countX.innerText, 10) > parseInt(countO.innerText, 10)) {
+      if(Xplayer.value !=''){
+        title.innerText = "Now it's "+Xplayer.value+"'s turn";
+      }
+      else{
       title.innerText = "Now it's X's turn";
+      }
       turn = "X";
     } else if (
       parseInt(countX.innerText, 10) < parseInt(countO.innerText, 10)
     ) {
+      if(Oplayer.value !=''){
+        title.innerText = "Now it's "+Oplayer.value+"'s turn";
+      }
+      else{
       title.innerText = "Now it's O's turn";
+      }
       turn = "O";
     } else {
       title.innerText = "tic tac";
